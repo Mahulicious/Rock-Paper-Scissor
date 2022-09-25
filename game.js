@@ -16,14 +16,12 @@ getComputerChoice(value);
 function getPlayerChoice () {
     let choice = prompt("Please enter Rock, Paper or Scissors");  
     let player= choice.toLocaleUpperCase();
-    console.log(player);
-    while (player != "ROCK" || player != "PAPER" || player != "SCISSORS") {
-        let choice = prompt("Please enter Rock, Paper or Scissors"); 
-        
-        } 
-    
-    return player;
-    
+    if (player === "ROCK" || player === "PAPER" || player === "SCISSORS" ) {
+    return player; 
+} else {
+    alert("Wrong Input");
+    getPlayerChoice();
+}
 
 
 }
