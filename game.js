@@ -14,32 +14,41 @@ function getComputerChoice (value) {
 getComputerChoice(value);
 
 function getPlayerChoice () {
-    let choice = prompt("Please enter Rock, Paper or Scissors");
+    let choice = prompt("Please enter Rock, Paper or Scissors");  
     let player= choice.toLocaleUpperCase();
+    console.log(player);
+    while (player != "ROCK" || player != "PAPER" || player != "SCISSORS") {
+        let choice = prompt("Please enter Rock, Paper or Scissors"); 
+        
+        } 
+    
     return player;
+    
+
 
 }
 
-const computerChoice = getComputerChoice(value);
-const playerChoice = getPlayerChoice();
+
+
+let computerWin = "Computer wins the round";
+let playerWin = "Player wins the round";
+let draw = "The round results in a draw"
 
 function playRound (computerChoice, playerChoice ) {
-    let computerScore;
-    let playerScore;
     if (computerChoice == "PAPER" && playerChoice == "ROCK") {
-        computerScore + 1;
-        return console.log("You lose! Paper beats Rock!");
+        
+        return computerWin;
     } else if (computerChoice == "ROCK" && playerChoice == "SCISSORS") {
-        computerScore + 1;
-        return console.log("You lose! Rock beats Scissors!");
-    } else if (computerChoice == "SCISSORS" && playerChoice== "PAPER") {
-        computerScore + 1;
-        return console.log("You lose! Scissors beats Paper!");
+       
+        return computerWin;
+    } else if (computerChoice == "SCISSORS" && playerChoice == "PAPER") {
+    
+        return computerWin;
     } else if (computerChoice == playerChoice) {
-        return console.log("The game is a draw!");
+        return draw;
     } else {
-        playerScore + 1;
-        return console.log("You win!");
+        
+        return playerWin;
     }
 
 
@@ -52,16 +61,47 @@ function playRound (computerChoice, playerChoice ) {
 function game () {    
    let computerScore = 0;
    let playerScore = 0;
+   
 for (let i = 0; i < 5; i++ ) {
-   playRound(computerChoice, playerChoice);
-   console.log(playRound);
+    const computerChoice = getComputerChoice(value);
+    const playerChoice = getPlayerChoice();
+    let result = playRound(computerChoice, playerChoice); 
+    games(result);
     
+}
 
+function games(score) {
+    if (score === computerWin) {
+        computerScore++;
+        
+        console.log("You lost! " + ""+"\nThe computer score is "  + computerScore
+        + " " + "\nYour score is " + playerScore);
+    } else if (score === playerWin )
+    {
+       playerScore++;
+       console.log("You won! " + "" + "\nYour score is " + playerScore
+        + " " + "\nThe computer score is " + computerScore);
+        
+    } else if (score === draw ) {
+    
+    console.log("Its a tie! " + "" + "\nYour score is " + playerScore
+        + " " + "\nThe computer score is " + computerScore);
+    }
+
+ }
+ if (playerScore > computerScore ) {
+    console.log("Congratulations! You won the game!");
+} else if (computerScore > playerScore ) {
+    console.log("You lost the game!");
+} else {
+    console.log("The game resulted in a tie!");
+}
 
 
 }
-}
-game();
+game(); //Call the game function
+
+
 
 
 
