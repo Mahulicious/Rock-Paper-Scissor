@@ -1,0 +1,94 @@
+#rockBtn {
+    width: 400px;
+    height: 400px;
+    background: url(./images/rock-ge0a8ec23e_640.png);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+
+
+}
+
+#paperBtn {
+    width: 400px;
+    height: 400px;
+    background: url(./images/stick-note-g20615d9e8_640.png);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+
+
+}
+
+#scissorsBtn {
+    width: 400px;
+    height: 400px;
+    background: url(./images/school-gc231b821e_640.png);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+
+
+}
+
+
+
+.heading {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    font-size: 52px;
+}
+
+body {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+}
+
+#comScore {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: gray;
+    font-size: 100px;
+    width: 150px;
+    height: 150px;
+}
+
+#playScore {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: gray;
+    font-size: 100px;
+    width: 150px;
+    height: 150px;
+
+}
+
+.scores {
+    display: flex;
+    gap: 60px;
+}
+
+.heading1 {
+    display: flex;
+    width: 330px;
+    font-size: 30px;
+    gap: 70px;
+    margin-top: 0px;
+
+
+}
+
+.scoreContainer {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+}
